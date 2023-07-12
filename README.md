@@ -8,32 +8,32 @@
 ## How to create angular micro-frontend
 -Run the following command to create a nx workspace
 ```
- `npx create-nx-workspace@latest `
+ npx create-nx-workspace@latest 
  ```
 -Run the following command to add library dependencies  to the nx workspace 
 ```
-`nx g @nx/angular:library --name=common-lib --importPath=@organization/common-lib --style=scss`
+nx g @nx/angular:library --name=common-lib --importPath=@organization/common-lib --style=scss
 ```
 - Configure the script to run the application in package.json 
 ```
-`"start:sample-app": "npx nx run sample-app:serve --configuration=development"`
+"start:sample-app": "npx nx run sample-app:serve --configuration=development"
 ```
 -- Add angular material dependency 
 ```
-`npm add @angular/material`
+npm add @angular/material
 ```
 -- Add @angular/material in project 
 ```
-`npx nx g @angular/material:ng-add --project=common-lib`
+npx nx g @angular/material:ng-add --project=common-lib
 ```
 -- Create a shared scss file in common-lib for theming component with angular material
 -- add shared scss file url in sample-app project.json 
 ```
-`"styles": ["libs/common-lib/styles/app.scss"]`
+"styles": ["libs/common-lib/styles/app.scss"]
 ```
 -- add @angular/material in sample-app  which will update the app.scss of common-lib by custom theme
 ```
-`npx nx g @angular/material:ng-add --project=common-lib`
+npx nx g @angular/material:ng-add --project=common-lib
 ```
 -- Generate the material.module file in common-lib
 
