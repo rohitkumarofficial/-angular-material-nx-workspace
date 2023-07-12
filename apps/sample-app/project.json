@@ -19,7 +19,7 @@
           "apps/sample-app/src/favicon.ico",
           "apps/sample-app/src/assets"
         ],
-        "styles": ["apps/sample-app/src/styles.scss"],
+        "styles": ["libs/common-lib/styles/app.scss"],
         "scripts": []
       },
       "configurations": {
